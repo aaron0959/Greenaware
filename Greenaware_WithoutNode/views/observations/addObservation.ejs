@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <%- include ('partials/head') %>
+    <body>
+        <div class = "banner">
+            <h1>Add New Observation</h1>
+        </div>
+        <%- include('partials/clientNavbar') %>
+        <div class = "content_section">
+            <form action = "addObservation" method = "post">
+                <fieldset>
+                    <legend>Add details for new observation: </legend>
+                    <p>
+                        <label for "authorName">Name: </label>
+                        <input id = "authorName" name = "authorName" required>
+                        <label for "timeZone">Time Zone: </label>
+                        <input id = "timeZone" name = "timeZone" required>
+                        <label for "w3w">What 3 Words: </label>
+                        <input id = "w3w" name = "w3w" required>
+                        <label for "temp">Temperature: </label>
+                        <input id = "temp" name = "temp" required>
+                        <label for "humidity">Humidity: </label>
+                        <input id = "humidity" name = "humidity" required>
+                        <label for "windspeed">Wind Speed: </label>
+                        <input id = "windspeed" name = "windspeed" required>
+                        <label for "windDirection">Wind Direction: </label>
+                        <select id = "windDirection" name = "windDirection" required>
+                            <option value ="North">North</option>
+                            <option value ="East">East</option>
+                            <option value ="South">South</option>
+                            <option value ="West">West</option>
+                            </select>
+                        <label for "precipitation">Precipitation: </label>
+                        <input id = "precipitation" name = "precipitation" required>
+                        <label for "haze">Haze: </label>
+                        <input id = "haze" name = "haze" required>
+                        <label for "notes">Additional Notes: </label>
+                        <input id = "notes" name = "notes" required>
+                        <br><button>Add Observation</button>
+\                    </p>
+                </fieldset>
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query User</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <div class = "grid">
+        <div class = "banner">
+            <h1>Query Observation From Database</h1>
+        </div>
+        <%- include('partials/clientNavbar') %>
+        <div class = "content_section">
+            <fieldset>
+                <legend>Observation Details</legend>
+                <table>
+                    <tr>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Time Zone</th>
+                        <th>What 3 Words</th>
+                        <th>Temperature</th>
+                        <th>Humidity</th>
+                        <th>Wind Speed</th>
+                        <th>Wind Direction</th>
+                        <th>Precipitation</th>
+                        <th>Haze</th>
+                        <th>Notes</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <%=observation.date%>
+                        </td>
+                        <td>
+                            <%=observation.time%>
+                        </td>
+                        <td>
+                            <%=observation.timeZone%>
+                        </td>
+                        <td>
+                            <%=observation.w3w%>
+                        </td>
+                        <td>
+                            <%=observation.temp%>
+                        </td>
+                        <td>
+                            <%=observation.humidity%>
+                        </td>
+                        <td>
+                            <%=observation.windspeed%>
+                        </td>
+                        <td>
+                            <%=observation.windDirection%>
+                        </td>
+                        <td>
+                            <%=observation.precipitation%>
+                        </td>
+                        <td>
+                            <%=observation.haze%>
+                        </td>
+                        <td>
+                            <%=observation.notes%>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </div>
+    </div>
+    
+</body>
+</html>

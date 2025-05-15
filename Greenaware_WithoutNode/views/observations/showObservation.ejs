@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <%- include('partials/head') %>
+    <body>
+        <div class = "banner">
+            <h1>All Observations</h1>
+        </div>
+        <%- include('partials/clientNavbar') %>
+        <div class = "content_section">
+            <fieldset>
+                <legend>All Observations: </legend>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>What 3 Words</th>
+                        <th>Date</th>
+                        <th>Temperature</th>
+                        <th>Precipitation</th>
+                    </tr>
+                    <%observations.forEach(function(obj){%>
+                        <tr>
+                            <td>
+                                <%=obj.authorName%>
+                            </td>
+                            <td>
+                                <%=obj.w3w%>
+                            </td>
+                            <td>
+                                <%=obj.date%>
+                            </td>
+                            <td>
+                                <%=obj.temp%>
+                            </td>
+                            <td>
+                                <%=obj.precipitation%>
+                            </td>
+                        </tr>
+                    <%})%>
+                </table>
+            </fieldset>
+        </div>
+    </body>
+</html>

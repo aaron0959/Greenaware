@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find User</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <div class = "grid">
+        <div class = "banner">
+            <h1>Query User</h1>
+        </div>
+        <%- include('partials/navbar') %>
+            <div class = "content_section">
+                <form action = "queryuser" method = "post">
+                    <fieldset>
+                        <legend>Query User Details From Database: </legend>
+                        <p>
+                            <label>Select User</label>
+                            <select name = "_id">
+                                <%users.forEach(function(obj){ %>
+                                    <option value = "<%=obj._id%>"</option>
+                                    <%=obj.userforename%>
+                                    <%=obj.usersurname%>
+                                <%})%>
+                            </select>
+                        </p>
+                        <button>Query User</button>
+                    </fieldset>
+                </form>
+            </div>
+    </div>
+    
+</body>
+</html>

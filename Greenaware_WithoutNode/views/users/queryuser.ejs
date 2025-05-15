@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query User</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <div class = "grid">
+        <div class = "banner">
+            <h1>Query User From Database</h1>
+        </div>
+        <%- include('partials/navbar') %>
+        <div class = "content_section">
+            <fieldset>
+                <legend>User Details</legend>
+                <table>
+                    <tr>
+                        <th>_id</th>
+                        <th>Forename</th>
+                        <th>Surname</th>
+                        <th>Address</th>
+                        <th>System Admin?</th>
+                        <th>Account Status</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <%=user._id%>
+                        </td>
+                        <td>
+                            <%=user.userforename%>
+                        </td>
+                        <td>
+                            <%=user.usersurname%>
+                        </td>
+                        <td>
+                            <%=user.userAddress%>
+                        </td>
+                        <td>
+                            <%=user.executiveAC%>
+                        </td>
+                        <td>
+                            <%=user.userStatus%>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </div>
+    </div>
+    
+</body>
+</html>

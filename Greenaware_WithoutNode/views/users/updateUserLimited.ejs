@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update User</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <div class = "grid">
+        <div class = "banner">
+            <h1>Update User</h1>
+        </div>
+        <%- include('partials/clientNavbar') %>
+        <div class = "content_section">
+            <form method = "post" action = "/users/updateUserLimited">
+                <form method = "get" action = "/users/updateUserLimited">
+                    <fieldset>
+                        <legend>User needs to login again: </legend>
+                        <p>
+                            <form action = "/users/updateUserLimited" method = "POST">
+                                <label for ="username">Email Address: </label>
+                                <input
+                                type="text"
+                                id="username"
+                                placeholder="Enter email..."
+                                required
+                            />
+                            <label for ="password">Password: </label>
+                            <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Enter password..."
+                            required
+                            />
+                            <input type="submit" value="Login" />
+                            </form>
+                        </p>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Amend Details: </legend>
+                        <p>
+                            <label for="usertitle">Title: </label>
+                            <select id = "usertitle" name = "usertitle" required>
+                                <option value="Mr">Mr</option>
+                                <option value="Ms">Ms</option>
+                                <option value="Mrs">Mrs</option>
+                                <option value="Dr">Dr</option>
+                            </select>
+
+                            <label for="userforename">Forename: </label>
+                            <input id="userforename" name="userforename" required>
+ 
+                            <label for="usersurname">Surname: </label>
+                            <input id="usersurname" name="usersurname" required>
+
+                            <label for="userAddress">Address: </label>
+                            <input id="userAddress" name="userAddress" required>
+ 
+                            <label for ="userStatus">Account Status: </label>
+                            <input type="radio" id="userStatus" name="userStatus" value="Active">
+                            <label for="userStatus">Active</label><br>
+                            <input type="radio" id="userStatus" name="userStatus" value="InActive">
+                            <label for="userStatus">InActive</label><br>
+        
+                            <label for ="executiveAC">Account Type: </label>
+                            <input type="radio" id="executiveAC" name="executiveAC" value="Admin">
+                            <label for="executiveAC">Admin</label><br>
+                            <input type="radio" id="executiveAC" name="executiveAC" value="Observer">
+                            <label for="executiveAC">Observer</label><br>
+        
+                            <br><button>Add user</button>
+
+                        </p>
+                    </fieldset>
+                </form>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

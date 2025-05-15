@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head') %>
+<body>
+    <div class = "grid">
+        <div class = "banner">
+            <h1>Register User</h1>
+        </div>
+        <%- include ('partials/navbar') %>
+        <div class = "content_section">
+            <form action = "adduser" method = "post">
+                <fieldset>
+                    <legend>New User Details: </legend>
+                    <p>
+                        <label for="usertitle">Title: </label>
+                        <select id="usertitle" name="usertitle" required>
+                            <option value="Mr"> Mr</option>
+                            <option value="Mrs"> Mrs</option>
+                            <option value="Ms"> Ms</option>
+                            <option value="Dr"> Dr</option>
+                        </select>
+                        <label for="userforename">Forename: </label>
+                        <input id="userforename" name="userforename" required>
+ 
+                        <label for="usersurname">Surname: </label>
+                        <input id="usersurname" name="usersurname" required>
+
+                        <label for="userAddress">Address: </label>
+                        <input id="userAddress" name="userAddress" required>
+
+                        <label for ="userStatus">Account Status: </label>
+                        <input type="radio" id="userStatus" name="userStatus" value="true">
+                        <label for="userStatus">Active</label><br>
+                        <input type="radio" id="userStatus" name="userStatus" value="false">
+                        <label for="userStatus">Suspended</label><br>
+
+                        <label for ="executiveAC">Account Type: </label>
+                        <input type="radio" id="executiveAC" name="executiveAC" value="true">
+                        <label for="executiveAC">Admin</label><br>
+                        <input type="radio" id="executiveAC" name="executiveAC" value="false">
+                        <label for="executiveAC">Observer</label><br>
+        
+                        <br><button>Add user</button>
+                    </p>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add User</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    <h1>Add User </h1>
+ 
+    <form action="adduser" method="post">
+        <label for="usertitle">Title: </label>
+        <select id="usertitle" name="usertitle" required>
+            <option value="Mr"> Mr</option>
+            <option value="Mrs"> Mrs</option>
+            <option value="Ms"> Ms</option>
+            <option value="Dr"> Dr</option>
+        </select>
+ 
+        <label for="userforename">Forename: </label>
+        <input id="userforename" name="userforename" required>
+ 
+        <label for="usersurname">Surname: </label>
+        <input id="usersurname" name="usersurname" required>
+ 
+        <label for="userAccounts">Number of Accounts: </label>
+        <input id="userAccounts" name="userAccounts" value="1" min="1" max="2" required>
+ 
+        <label for="userDOB">Date of Birth: </label>
+        <input id="userDOB" name="userDOB" type="date" value="1970-01-01"
+min="1910-01-01" max="2010-01-01" required>
+ 
+        
+        <label for ="executiveAC">Executive Account: </label>
+        <input type="radio" id="executiveAC" name="executiveAC" value="true">
+        <label for="executiveAC">Yes</label><br>
+        <input type="radio" id="executiveAC" name="executiveAC" value="false">
+        <label for="executiveAC">No</label><br>
+        
+        <br><button>Add user</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "assignment2",
+  "version": "1.0.0",
+  "description": "SWE5203_Assignment2_2201525",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ATownley",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "mongoose": "^8.3.5",
+    "node": "^22.2.0",
+    "passport": "^0.7.0",
+    "passport-local-mongoose": "^8.0.0",
+    "save": "^2.9.0"
+  }
+}
